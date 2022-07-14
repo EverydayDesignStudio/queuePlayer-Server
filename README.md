@@ -1,1 +1,1 @@
-# queuePlayer-Server
+# queuePlayer
