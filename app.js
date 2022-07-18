@@ -7,6 +7,9 @@ var fs= require('fs');
 var bodyParser = require("body-parser");
 var SpotifyWebApi = require('spotify-web-api-node');
 
+//Heroku
+const PORT = process.env.PORT || 3000;
+
 //Scope Definition for Spotify WebAPI calls
 const scopes = [
     'ugc-image-upload',
@@ -34,7 +37,7 @@ const scopes = [
 var spotifyApi = new SpotifyWebApi({
     clientId: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    redirectUri: 'http://localhost:8888/callback'
+    redirectUri: `http://localhost:${PORT}/callback`
 });
 
 var access_token;
@@ -195,9 +198,9 @@ app.post('/getTrack', (req, res) => {
   })
 })
 
-app.listen(8888, () =>
+app.listen(PORT, () =>
    console.log(
-     'HTTP Server up. Now go to http://localhost:8888/ in your browser.'
+     `HTTP Server up. Now go to http://localhost:${PORT}/ in your browser.`
    )
  );
 
