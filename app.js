@@ -37,8 +37,11 @@ const scopes = [
 var spotifyApi = new SpotifyWebApi({
     clientId: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    redirectUri: `http://localhost:${PORT}/callback`
+    redirectUri: `https://queue-player.herokuapp.com:${PORT}/callback`
 });
+
+// `https://queue-player.herokuapp.com:${PORT}/callback`
+// `http://localhost:${PORT}/callback`
 
 var access_token;
 
