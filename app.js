@@ -40,6 +40,7 @@ var spotifyApi = new SpotifyWebApi({
     redirectUri: `https://queue-player.herokuapp.com:${PORT}/callback`
 });
 
+// Tested the following redirect URLs
 // `https://queue-player.herokuapp.com:${PORT}/callback`
 // `http://localhost:${PORT}/callback`
 
@@ -203,7 +204,7 @@ app.post('/getTrack', (req, res) => {
 
 app.listen(PORT, () =>
    console.log(
-     `HTTP Server up. Now go to http://localhost:${PORT}/ in your browser.`
+     `HTTP Server up. Now go to https://queue-player.herokuapp.com:${PORT}/callback in your browser.`
    )
  );
 
