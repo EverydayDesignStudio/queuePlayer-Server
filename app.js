@@ -8,7 +8,7 @@ var bodyParser = require("body-parser");
 var SpotifyWebApi = require('spotify-web-api-node');
 
 //Heroku
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 80;
 
 //Scope Definition for Spotify WebAPI calls
 const scopes = [
