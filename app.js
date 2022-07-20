@@ -40,7 +40,6 @@
  });
  
  var access_token;
- 
  //Initialising the express server
  const app = express();
  app.use(bodyParser.json());
