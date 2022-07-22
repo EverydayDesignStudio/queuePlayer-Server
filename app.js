@@ -147,8 +147,7 @@
  app.post('/playback',async (req, res) => {
   console.log("Kya kr rha hai")
    res.setHeader('Content-Type', 'application/json');
-   const play= await spotifyApi.play('1632b74b504b297585776e716b8336510639401a',
-    {
+   const play= await spotifyApi.play({
       "uris": req.body.song,
       "position_ms":0,
    }).then(function() {
