@@ -147,8 +147,11 @@
  app.post('/playback',async (req, res) => {
    res.setHeader('Content-Type', 'application/json');
    const play= await spotifyApi.play({
-     "uris": req.body.song,
-     "position_ms":0,
+    "device_id":'1632b74b504b297585776e716b8336510639401a',
+    body:{
+      "uris": req.body.song,
+      "position_ms":0,
+    }
    }).then(function() {
        console.log('Playback started');
        res.send();
